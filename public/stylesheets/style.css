@@ -1,0 +1,37 @@
+body {
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font: normal 16px 'Roboto';
+  color: #555;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.social {
+  font-size: 1.33rem;
+}
+
+.social a i {
+  color: darkgray;
+  margin-right: 10px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

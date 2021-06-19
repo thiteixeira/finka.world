@@ -1,0 +1,99 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font: normal 16px 'Roboto';
+  color: #555;
+}
+
+.jumbotron {
+  color: white;
+  background-image: url('../images/talks2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#mainNavbar {
+  font-weight: 400;
+  /* padding: 35px 100px 0 !important; */
+  animation: 1s fadein 0.5s forwards;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+#mainNavbar .navbar-brand {
+  font-size: 1.5rem;
+}
+
+.hero-content-area {
+  margin-top: 200px;
+}
+
+.hero-content-area img,
+.hero-content-area h3 {
+  margin-bottom: 2rem;
+}
+
+.hero-content-area a.btn {
+  padding: 20px 35px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: white;
+  background-color: #4d9eb6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+  opacity: 0.9 !important;
+}
+
+a:hover {
+  opacity: 1 !important;
+}
+
+hr {
+  width: 250px;
+  height: 2px;
+  background-color: #4d9eb6;
+  border: 0;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+section li {
+  padding: 50px;
+  flex-basis: 50%;
+  text-align: center;
+}
+
+section li i {
+  color: #4d9eb6;
+}
+
+section li h4 {
+  font-size: 2rem;
+  margin: 25px 0;
+}
+
+.social {
+  font-size: 1.33rem;
+}
+
+.social a i {
+  color: darkgray;
+  margin-right: 10px;
+}

@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Add New Content</h1>
+    </div>
+    <div style="width: 30%; margin: 25px auto">
+      <form action="/content" method="post">
+        <div class="form-group">
+          <label for="title">Video Title</label>
+          <input type="text" class="form-control" id="title" name="title" />
+        </div>
+        <div class="form-group">
+          <label for="short_description">Short Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="short_description"
+            name="short_description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="long_description">Long Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="long_description"
+            name="long_description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input
+            type="text"
+            class="form-control"
+            id="category"
+            name="category"
+          />
+        </div>
+        <div class="form-group">
+          <label for="profession">Profession</label>
+          <input
+            type="text"
+            class="form-control"
+            id="profession"
+            name="profession"
+          />
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            min="0.01"
+            step="0.01"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+      <a href="/">Go back </a>
+    </div>
+  </div>
+</div>

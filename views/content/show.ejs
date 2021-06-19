@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') -%>
+<h1><%= content.title %></h1>
+<h2>Description</h2>
+<p><%= content.long_description %></p>
+
+<h2>Meta</h2>
+<p>Authors: <%= content.authors %></p>
+<p>Created: <%= content.date %></p>
+
+<div class="d-flex justify-content-around mt-5">
+  <a href="/content" class="btn btn-outline-danger">Back</a>
+  <!-- TODO: Make this a form? and once the purchase button is clicked, 
+    add the video to the user record (PUT or PATCH -- see method-override), and 
+    redirect to the my-content route -->
+  <a
+    href="#"
+    class="btn btn-success"
+    data-toggle="tooltip"
+    data-placement="top"
+    title="Please make sure to review our refund policy"
+  >
+    Puschase&nbsp;
+    <i class="fas fa-dollar-sign"></i><%=content.price %>
+  </a>
+</div>
