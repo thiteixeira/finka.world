@@ -1,200 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="
-    A platform for the public by healthcare advocates"
-    />
-    <meta name="keywords" content="Healthcare, healthcare Lectures" />
-    <meta name="author" content="Jeffrey Aldeus" />
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="
+    A platform for the public by healthcare advocates" />
+  <meta name="keywords" content="Healthcare, healthcare Lectures" />
+  <meta name="author" content="Jeffrey Aldeus" />
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Finka World</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VDHLC845GW"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-      gtag('config', 'G-VDHLC845GW');
-    </script>
-    <script data-ad-client="ca-pub-7355274159451431" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="/stylesheets/index.css" />
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <nav
-          id="mainNavbar"
-          class="navbar navbar-dark navbar-expand-md py-0"
-          style="background-color: transparent"
-        >
-          <span class="navbar-brand mb-0 h1">Finka World</span>
-          <button
-            class="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#navLinks"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navLinks"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/content" aria-label="Browse content"
-                  >Browse Content</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/my-content" aria-label="My content"
-                  >My Content</a
-                >
-              </li>
-              <% if (!currentUser) { %>
+  <title>Finka World</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDHLC845GW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VDHLC845GW');
+  </script>
+  <script data-ad-client="ca-pub-7355274159451431" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="/stylesheets/index.css" />
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0" style="background-color: transparent">
+        <span class="navbar-brand mb-0 h1">Finka World</span>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/content" aria-label="Browse content">Browse Content</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/my-content" aria-label="My content">My Content</a>
+            </li>
+            <% if (!currentUser) { %>
               <li class="nav-item">
                 <a class="nav-link" href="/login" aria-label="Login">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/register" aria-label="Register"
-                  >Register</a
-                >
+                <a class="nav-link" href="/register" aria-label="Register">Register</a>
               </li>
               <% } else { %>
-              <li class="nav-item active">
-                <span class="nav-link"
-                  >Signed in as <%= currentUser.username %></span
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/logout" aria-label="Logout"
-                  >Logout</a
-                >
-              </li>
-              <% } %>
-            </ul>
-          </div>
-        </nav>
-        <div
-          class="d-flex flex-column justify-content-center align-items-center hero-content-area"
-        >
-          <img src="images/finka_logo_150.png" />
-          <h1>Finka World</h1>
-          <h3>The platform for the public by healthcare advocates</h3>
-          <a href="/content" class="btn hero-btn" aria-label="Browse Content"
-            >Browse Content</a
-          >
-          <p class="mt-5">Please take a moment to watch this short disclaimer by our Founder and CEO Jeff Aldeus</p>
-          <video controls height="300">
-            <source 
-              src="videos/disclaimer.mp4"
-              type="video/mp4"
-            >
-          </video>
+                <li class="nav-item active">
+                  <span class="nav-link">Signed in as <%= currentUser.username %></span>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout" aria-label="Logout">Logout</a>
+                </li>
+                <% } %>
+          </ul>
         </div>
+      </nav>
+      <div class="d-flex flex-column justify-content-center align-items-center hero-content-area">
+        <img src="images/finka_logo_150.png" />
+        <h1>Finka World</h1>
+        <h3>The platform for the public by healthcare advocates</h3>
+        <a href="/content" class="btn hero-btn" aria-label="Browse Content">Browse Content</a>
+        <p class="mt-5">Please take a moment to watch this short disclaimer by our Founder and CEO Jeff Aldeus</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qw3kuQp7Mx0?controls=0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
-    <section class="d-flex flex-column align-items-center">
-      <h3 class="title">Experience Finka</h3>
-      <p class="w-50">
-        Finka is a platform for the public by healthcare advocates. Lectures and
-        credible information given at a small price that will also be given
-        towards education for those in related fields.
-      </p>
-      <hr />
+  </div>
+  <section class="d-flex flex-column align-items-center">
+    <h3 class="title">Experience Finka</h3>
+    <p class="w-50">
+      Finka is a platform for the public by healthcare advocates. Lectures and
+      credible information given at a small price that will also be given
+      towards education for those in related fields.
+    </p>
+    <hr />
 
-      <div class="container">
-        <ul class="d-flex flex-wrap justify-content-around">
-          <li>
-            <a href="/upcoming" class="d-block">
-              <i class="fa fa-video fa-4x"></i>
-              <h4>Upcoming Content</h4>
-              <p>
-                Learn more about upcoming videos, events, and other news.
-                Interested in submitting a talk? Contact us!
-              </p>
-            </a>
-          </li>
-          <li>
-            <a href="/recipients" class="d-block">
-              <i class="fa fa-gift fa-4x"></i>
-              <h4>Recipients</h4>
-              <p>
-                Interested in being a Finka recipient? Read the testimonials
-                from previous Finka scholars.
-              </p>
-            </a>
-          </li>
-          <li>
-            <a href="/about" class="d-block">
-              <i class="fa fa-info-circle fa-4x"></i>
-              <h4>About Finka</h4>
-              <p>
-                Learn about the company history, our mission, meet the team and
-                learn who we are.
-              </p>
-            </a>
-          </li>
-          <li>
-            <a href="/contact" class="d-block">
-              <i class="fa fa-address-book fa-4x"></i>
-              <h4>Contact Us</h4>
-              <p>
-                Got an idea for a talk or event? Want to stay tuned to the
-                newest videos? Make sure to follow us on social media.
-              </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <%- include("./layouts/footer") %>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <div class="container">
+      <ul class="d-flex flex-wrap justify-content-around">
+        <li>
+          <a href="/upcoming" class="d-block">
+            <i class="fa fa-video fa-4x"></i>
+            <h4>Upcoming Content</h4>
+            <p>
+              Learn more about upcoming videos, events, and other news.
+              Interested in submitting a talk? Contact us!
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="/recipients" class="d-block">
+            <i class="fa fa-gift fa-4x"></i>
+            <h4>Recipients</h4>
+            <p>
+              Interested in being a Finka recipient? Read the testimonials
+              from previous Finka scholars.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="d-block">
+            <i class="fa fa-info-circle fa-4x"></i>
+            <h4>About Finka</h4>
+            <p>
+              Learn about the company history, our mission, meet the team and
+              learn who we are.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="/contact" class="d-block">
+            <i class="fa fa-address-book fa-4x"></i>
+            <h4>Contact Us</h4>
+            <p>
+              Got an idea for a talk or event? Want to stay tuned to the
+              newest videos? Make sure to follow us on social media.
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <%- include("./layouts/footer") %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
