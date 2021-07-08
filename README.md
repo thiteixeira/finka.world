@@ -68,7 +68,7 @@ The `Videos` model comprises of the following key/value pairs
 
 Updating entries in the database can be done with `findOneAndUpdate` command for instance.
 
-## Deploying to code
+## Deploying the code
 
 Any merges to master will automatically trigger a deploy to production. Merges to master should be done via Pull Requests, approved (if multiple devs), and tested locally.
 
