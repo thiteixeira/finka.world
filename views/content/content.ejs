@@ -1,32 +1,37 @@
 <% layout('layouts/boilerplate') -%>
-<h1><%= title %></h1>
-<div class="d-flex flex-wrap">
-  <% contents.forEach((content) => { %>
-  <div class="col-lg-3 col-md-4 col-sm-6">
-    <div class="card mb-4">
-      <img
-        class="card-img-top"
-        src="//placehold.it/320x230"
-        alt="Card image cap"
-      />
-      <div class="card-body">
-        <h4 class="card-title"><%= content.title %></h4>
-        <p class="card-text"><%= content.short_description %></p>
-        <blockquote>
-          <footer class="blockquote-footer">
-            Author:
-            <cite title="Source Title"
-              ><%= content.authors %></cite
-            >
-          </footer>
-        </blockquote>
-        <p>
-          <a href="/content/<%= content._id %>" class="btn btn-outline-info">
-            More Info
-          </a>
-        </p>
+  <h1>
+    <%= title %>
+  </h1>
+  <div class="d-flex flex-wrap">
+    <% contents.forEach((content)=> { %>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card mb-4">
+          <img class="card-img-top" src="//placehold.it/320x230" alt="Card image cap" />
+          <div class="card-body">
+            <h4 class="card-title">
+              <%= content.title %>
+            </h4>
+            <p class="card-text">
+              <%= content.short_description %>
+            </p>
+            <form action="/create-checkout-session" method="POST">
+              <button type="submit">Checkout</button>
+            </form>
+            <blockquote>
+              <footer class="blockquote-footer">
+                Author:
+                <cite title="Source Title">
+                  <%= content.authors %>
+                </cite>
+              </footer>
+            </blockquote>
+            <p>
+              <a href="/content/<%= content._id %>" class="btn btn-outline-info">
+                More Info
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+      <% }); %>
   </div>
-  <% }); %>
-</div>
